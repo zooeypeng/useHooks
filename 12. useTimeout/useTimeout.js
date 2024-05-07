@@ -15,7 +15,7 @@ export default function useTimeout(cb, ms) {
     id.current = window.setTimeout(onTimeout, ms);
 
     return handleClearTimeout;
-  }, [handleClearTimeout, ms]);
+  }, [ms, handleClearTimeout]);
 
   return handleClearTimeout;
 }

@@ -18,11 +18,7 @@ function MyComponent() {
     const [items, setItems] = useState(['item1', 'item2', 'item3']);
 
     const addItem = () => {
-        // 使用 spread 運算符創建一個新的數組，並將新項目添加到該數組中
-        const newItems = [...items, 'newItem'];
-
-        // 使用狀態更新函數將新數組設置為狀態的值
-        setItems(newItems);
+        setItems((prevItems) => [...prevItems, newItem]);
     };
 
     return (
